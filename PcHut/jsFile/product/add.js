@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("#addBranch").html("<input id='addProdBranchText'>");
 
     $.ajax({
-        url: "http://localhost:3817/api/brands",
+        url: "http://localhost:3817/api/brand",
         async: false,
         complete: function (xmlHttp, status){
             if(xmlHttp.status == 200){
@@ -29,7 +29,7 @@ $(document).ready(function () {
     })
 
     $.ajax({
-        url: "http://localhost:3817/api/categories",
+        url: "http://localhost:3817/api/category",
 
         complete: function (xmlHttp, status){
             if(xmlHttp.status == 200){
