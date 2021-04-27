@@ -1,7 +1,7 @@
 $(document).ready(function () {
     alert("hello");
     $.ajax({
-        url: "http://localhost:3817/api/product",
+        url: "http://localhost:3817/api/products",
         //method: "GET",
         complete: function (xmlHttp, status){
             if(xmlHttp.status == 200){

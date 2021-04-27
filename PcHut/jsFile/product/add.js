@@ -68,7 +68,7 @@ function addProduct(){
     alert("hijfisd");
 
     $.ajax({
-        url: "http://localhost:3817/api/product",
+        url: "http://localhost:3817/api/products",
         method: "POST",
         headers: "Content-Type:application/json",
         data: {
