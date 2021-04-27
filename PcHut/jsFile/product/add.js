@@ -5,11 +5,11 @@ $(document).ready(function () {
     $("#addProdSpecial").html("<input id='addProdSpecialText'>");
     $("#addProdWarranty").html("<input id='addProdWarrantyText'>");
     $("#addProdPrice").html("<input id='addProdPriceText'>");
-    $("#addProdQuantity").html("<input id='addProdQuantityText'>");
-    $("#addBranch").html("<input id='addProdBranchText'>");
+    /*$("#addProdQuantity").html("<input id='addProdQuantityText'>");
+    $("#addBranch").html("<input id='addProdBranchText'>");*/
 
     $.ajax({
-        url: "http://localhost:3817/api/brand",
+        url: "http://localhost:3817/api/brands",
         async: false,
         complete: function (xmlHttp, status){
             if(xmlHttp.status == 200){
@@ -29,7 +29,7 @@ $(document).ready(function () {
     })
 
     $.ajax({
-        url: "http://localhost:3817/api/category",
+        url: "http://localhost:3817/api/categories",
 
         complete: function (xmlHttp, status){
             if(xmlHttp.status == 200){
@@ -58,14 +58,14 @@ function addProduct(){
     var special = document.getElementById("addProdSpecialText").value;
     var warranty = document.getElementById("addProdWarrantyText").value;
     var price = document.getElementById("addProdPriceText").value;
-    var quantity = document.getElementById("addProdQuantityText").value;
+    //var quantity = document.getElementById("addProdQuantityText").value;
     var category_name = document.getElementById("addCategoryList").value;
     alert("vlkdv");
     var cat_id = document.getElementById("addCategoryList").value;
     var brand_id = document.getElementById("addBrandList").value;
-    var branch_id = document.getElementById("addProdBranchText").value;
+    //var branch_id = document.getElementById("addProdBranchText").value;
     //var category_Id = cat_id.value;
-    alert("hijfisd");
+    //alert("hijfisd");
 
     $.ajax({
         url: "http://localhost:3817/api/products",
@@ -78,9 +78,9 @@ function addProduct(){
             "warranty": warranty,
             "price": price, //get data which is in the text field
             "categoryId": cat_id, //get data which is in the text field
-            "quantity": quantity,
+            //"quantity": quantity,
             "brandId": brand_id,
-            "branchId": branch_id
+            //"branchId": branch_id
         },
         complete: function (xmlHttp, status) {
             //alert("here it is");
