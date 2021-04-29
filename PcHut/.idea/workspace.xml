@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9194f0d7-8253-4198-8d20-0f23e10cc53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/product/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/product/add.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jsFile/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/product/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/product/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\views\distributedProduct" />
       <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\jsFile\customer" />
       <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\views\customer" />
     </key>
@@ -77,7 +77,10 @@
       <workItem from="1619329256209" duration="18852000" />
       <workItem from="1619375912713" duration="8629000" />
       <workItem from="1619420507959" duration="8371000" />
-      <workItem from="1619518781817" duration="11274000" />
+      <workItem from="1619518781817" duration="21496000" />
+      <workItem from="1619599590216" duration="16190000" />
+      <workItem from="1619634773059" duration="3488000" />
+      <workItem from="1619681885420" duration="15304000" />
     </task>
     <servers />
   </component>
@@ -97,9 +100,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="41" y="190" key="run.anything.popup" timestamp="1619343687465">
+    <state x="41" y="190" key="run.anything.popup" timestamp="1619553016873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="41" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1619343687465" />
+    <state x="41" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1619553016873" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1619702934902">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1619702934902" />
   </component>
 </project>
