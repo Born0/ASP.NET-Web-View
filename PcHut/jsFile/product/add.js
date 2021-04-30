@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    alert("add Product");
+    //alert("add Product");
     $("#addProdName").html("<input id='addProdNameText'>");
     $("#addProdDetails").html("<input id='addProdDetailsText'>");
     $("#addProdSpecial").html("<input id='addProdSpecialText'>");
@@ -60,7 +60,7 @@ function addProduct(){
     var price = document.getElementById("addProdPriceText").value;
     //var quantity = document.getElementById("addProdQuantityText").value;
     var category_name = document.getElementById("addCategoryList").value;
-    alert("vlkdv");
+    //alert("vlkdv");
     var cat_id = document.getElementById("addCategoryList").value;
     var brand_id = document.getElementById("addBrandList").value;
     //var branch_id = document.getElementById("addProdBranchText").value;
@@ -85,7 +85,7 @@ function addProduct(){
         complete: function (xmlHttp, status) {
             //alert("here it is");
             if(xmlHttp.status == 201){
-                alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nSuccessfully Added");
+                //alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nSuccessfully Added");
                 window.location.replace("index.html");
             }
             else {
