@@ -1,7 +1,7 @@
 $(document).ready(function() {
     //alert("hello all BranchManager");
     $.ajax({
-      url: "http://localhost:3817/api/branchManager",
+      url: "http://localhost:3817/api/branchManagers",
       method:"GET",
       complete: function(xmlHttp,status){
         if(xmlHttp.status==200){
