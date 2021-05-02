@@ -9,7 +9,7 @@ $(document).ready(function () {
     var branch_id = url.searchParams.get('branchId');
     var status = url.searchParams.get('status');
     $("#showDistributedBranchName").html("<strong>"+branch_name+"</strong>");
-    $("#showDistributedProductQuantity").html("<input type='text' value='"+quantity+"' id='distributedProductQuantityUpdateText'>");
+    $("#showDistributedProductQuantity").html("<input type='text' value='"+quantity+"' id='distributedProductQuantityUpdateText' name='distributedProductQuantityUpdateText'>");
     $("#distributedBranchQuantityUpdateBtn").html("<button onclick='editBranchProductQuantity("+product_distributed_id+", "+product_id+", "+branch_id+", "+status+")'>Update</button>");
 
 })
@@ -17,27 +17,42 @@ $(document).ready(function () {
 function editBranchProductQuantity(product_distributed_id, product_id, branch_id, status) {
     var product_quantity = $("#distributedProductQuantityUpdateText").val();
     var parse_product_quantity = parseInt(product_quantity);
-    $.ajax({
-        url: "http://localhost:3817/api/distributedProducts/"+product_distributed_id,
-        method: "PUT",
-        data: {
-            //"productId": $("#updateProductName").val(), //get data which is in the text field
-            //"brandId": document.getElementById("brandListForProductUpdate"),
-            //"categoryId": document.getElementById("categoryListForProductUpdate"),
-            "productId": product_id,
-            "branchId": branch_id,
-            "quantity": parse_product_quantity,
-            "status": status
+    $("#editQuantityBranchForm").validate({
+        rules: {
+            distributedProductQuantityUpdateText: {
+                required: true,
+                min: 0
+            }
         },
-        complete: function (xmlHttp, status) {
-            //alert("here it is");
-            if(xmlHttp.status == 200){
-                alert("Successfully Updated");
-                window.location.replace("../distributedProduct/index.html?productId="+product_id);
-            }
-            else {
-                alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nFailed To Update");
-            }
+        message: {
+            required: "Quantity Required",
+            min: "At Least Zero and No Alphabet"
+        },
+        submitHandler: function (formUpdateProdQuantity) {
+            $.ajax({
+                url: "http://localhost:3817/api/distributedProducts/"+product_distributed_id,
+                method: "PUT",
+                data: {
+                    //"productId": $("#updateProductName").val(), //get data which is in the text field
+                    //"brandId": document.getElementById("brandListForProductUpdate"),
+                    //"categoryId": document.getElementById("categoryListForProductUpdate"),
+                    "productId": product_id,
+                    "branchId": branch_id,
+                    "quantity": $("#distributedProductQuantityUpdateText").val(),
+                    "status": status
+                },
+                complete: function (xmlHttp, status) {
+                    //alert("here it is");
+                    if(xmlHttp.status == 200){
+                        alert("Successfully Updated");
+                        window.location.replace("../distributedProduct/index.html?productId="+product_id);
+                    }
+                    else {
+                        alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nFailed To Update");
+                    }
+                }
+            })
         }
-    })
+    }).valid();
+
 }

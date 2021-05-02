@@ -63,9 +63,9 @@ $(document).ready(function () {
                         "<td>"+data[i].Details+"</td>"+
                         "<td>"+data[i].Warranty+"</td>"+
                         "<td>"+status_message[i]+"</td>"+
-                        "<td><input type='button' onclick='changeStatus("+data[i].ProductId+")' value='Change Status'></td>"+
-                        "<td><input type='button' onclick='checkProductQuantityByBranch("+data[i].ProductId+")' value='Check Inventory'></td>"+
-                        "<td><input type='button' onclick='updateProduct("+data[i].ProductId+", \""+data[i].ProductName+"\", \""+category_id[i]+"\", \""+brand_id[i]+"\", "+data[i].Price+", \""+data[i].Special+"\", \""+data[i].Warranty+"\", \""+data[i].Details+"\")' value='Edit'></td>"+
+                        "<td><input type='button' class=\"w3-button w3-black w3-round-large\" onclick='changeStatus("+data[i].ProductId+")' value='Change Status'></td>"+
+                        "<td><input type='button' class=\"w3-button w3-black w3-round-large\" onclick='checkProductQuantityByBranch("+data[i].ProductId+")' value='Check Inventory'></td>"+
+                        "<td><input type='button' class=\"w3-button w3-black w3-round-large\" onclick='updateProduct("+data[i].ProductId+", \""+data[i].ProductName+"\", \""+category_id[i]+"\", \""+brand_id[i]+"\", "+data[i].Price+", \""+data[i].Special+"\", \""+data[i].Warranty+"\", \""+data[i].Details+"\", "+data[i].Status+")' value='Edit'></td>"+
                         "</tr>"
                 }
                 $("tbody").html(str);
@@ -93,8 +93,8 @@ function changeStatus(product_id) {
     })
 }
 
-function updateProduct(product_id, product_name, category_id, brand_id, price, special, warranty, details) {
-    window.location.href = "../product/edit.html?productId="+product_id+"&productName="+product_name+"&categoryId="+category_id+"&brandId="+brand_id+"&price="+price+"&special="+special+"&warranty="+warranty+"&details="+details;
+function updateProduct(product_id, product_name, category_id, brand_id, price, special, warranty, details, status) {
+    window.location.href = "../product/edit.html?productId="+product_id+"&productName="+product_name+"&categoryId="+category_id+"&brandId="+brand_id+"&price="+price+"&special="+special+"&warranty="+warranty+"&details="+details+"&status="+status;
 }
 
 function checkProductQuantityByBranch(product_id) {

@@ -52,7 +52,7 @@ $(document).ready(function () {
 
                     //Check the Main Product Status
                     $.ajax({
-                        url: "http://localhost:3817/api/products/1" + product_id,
+                        url: "http://localhost:3817/api/products/" + product_id_url,
                         method: "GET",
                         async: false,
                         complete: function (xmlHttp, status) {

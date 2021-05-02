@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
     <script type="text/javascript" src="../../jsFile/distributedProduct/add.js"></script>
 </head>
 <body>
+<form id="addProductQuantityBranch" class="w3-container">
     <table align="center">
         <tr>
             <td>Available Branch</td>
-            <td>
-                <select id="availableBranchList">
+            <td class="w3-dropdown-hover">
+                <select id="availableBranchList" class="w3-bar-item w3-button">
 
                 </select>
             </td>
@@ -26,5 +33,6 @@
             <td id="addDistributedProductBtn"></td>
         </tr>
     </table>
+</form>
 </body>
 </html>
