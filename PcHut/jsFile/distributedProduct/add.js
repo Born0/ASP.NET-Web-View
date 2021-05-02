@@ -24,29 +24,44 @@ $(document).ready(function () {
             $("#addDistributedProductBtn").html("<button onclick='addDistributedProduct("+product_id_url+")'>Add</button>")
         },
     })
-    $("#setQuantityForBranch").html("<input type='text' id='addedProductQuantityText'>");
+    $("#setQuantityForBranch").html("<input type='text' id='addedProductQuantityText' name='addedProductQuantityText'>");
 })
 
 function addDistributedProduct(product_id) {
 
-    $.ajax({
-        url: "http://localhost:3817/api/distributedProducts",
-        method: "POST",
-        headers: "Content-Type:application/json",
-        data: {
-            "quantity": document.getElementById("addedProductQuantityText").value, //get data which is in the text field
-            "productId": product_id,
-            "branchId": document.getElementById("availableBranchList").value
+    $("#addProductQuantityBranch").validate({
+        rules: {
+            addedProductQuantityText: {
+                required: true,
+                min: 0
+            }
         },
-        complete: function (xmlHttp, status) {
-            //alert("here it is");
-            if(xmlHttp.status == 201){
-                alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nSuccessfully Added");
-                window.location.replace("index.html?productId="+product_id);
+        message: {
+            addedProductQuantityText: {
+                required: "Quantity Required",
+                min: "At Least Zero and No Alphabet"
             }
-            else {
-                alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nFailed To Add");
-            }
+        },
+        submitHandler: function (formAddProdQuantity) {
+            $.ajax({
+                url: "http://localhost:3817/api/distributedProducts",
+                method: "POST",
+                headers: "Content-Type:application/json",
+                data: {
+                    "quantity": $("#addedProductQuantityText").val(), //get data which is in the text field
+                    "productId": product_id,
+                    "branchId": document.getElementById("availableBranchList").value
+                },
+                complete: function (xmlHttp, status) {
+                    //alert("here it is");
+                    if (xmlHttp.status == 201) {
+                        alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nSuccessfully Added");
+                        window.location.replace("index.html?productId=" + product_id);
+                    } else {
+                        alert(xmlHttp.status + ": " + xmlHttp.statusText + "\nFailed To Add");
+                    }
+                }
+            })
         }
-    })
+    }).valid();
 }
