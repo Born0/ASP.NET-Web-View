@@ -1,7 +1,7 @@
 $(document).ready(function() {
   alert("Get all branch");
   $.ajax({
-    url:"http://localhost:3817/api/branch",
+    url:"http://localhost:3817/api/branches",
     method:"GET",
     complete:function(xmlHttp,status){
       if(xmlHttp.status==200){
