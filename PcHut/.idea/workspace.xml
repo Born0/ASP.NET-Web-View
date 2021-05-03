@@ -21,17 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9194f0d7-8253-4198-8d20-0f23e10cc53f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/distributedProduct/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/distributedProduct/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/distributedProduct/editQuantity.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/distributedProduct/editQuantity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/distributedProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/distributedProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/product/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/product/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/product/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/product/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsFile/product/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/jsFile/product/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Branch/allBranchSales.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/Branch/allBranchSales.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/distributedProduct/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/distributedProduct/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/distributedProduct/editQuantity.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/distributedProduct/editQuantity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/product/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/product/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -69,6 +58,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\views\sales" />
+      <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\jsFile\sales" />
       <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\views\distributedProduct" />
       <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\jsFile\customer" />
       <recent name="C:\new Xampp\htdocs\FinalDotNetProject\ASP.NET-Web-View\PcHut\views\customer" />
@@ -96,7 +87,7 @@
       <workItem from="1619782953409" duration="21342000" />
       <workItem from="1619848897700" duration="7475000" />
       <workItem from="1619883879924" duration="14426000" />
-      <workItem from="1619934032407" duration="8426000" />
+      <workItem from="1619934032407" duration="21846000" />
     </task>
     <servers />
   </component>
